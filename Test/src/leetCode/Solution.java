@@ -13,7 +13,7 @@ package leetCode;
             A[n-1] = B[--n];
     }
 }
-This way is very nice.
+This way is very nice.  test for github for eclipse
  */
 public class Solution {
     public void merge(int A[], int m, int B[], int n) {
