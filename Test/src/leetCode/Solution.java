@@ -1,4 +1,4 @@
-package leetCode;
+﻿package leetCode;
 /**
  * problem:Given two sorted arrays A and B ,merge  B into A as one sorted array 
  * @author  lason
@@ -47,8 +47,8 @@ public class Solution {
     	 }
     }
     
-    //匹配算法的分析 
-    //关键在于*的处理  我们首先获取*的个数  通过分析a,b字符串的个数以及*所在的位置判断*代替的个数
+    //鍖归厤绠楁硶鐨勫垎鏋� 
+    //鍏抽敭鍦ㄤ簬*鐨勫鐞�  鎴戜滑棣栧厛鑾峰彇*鐨勪釜鏁�  閫氳繃鍒嗘瀽a,b瀛楃涓茬殑涓暟浠ュ強*鎵�鍦ㄧ殑浣嶇疆鍒ゆ柇*浠ｆ浛鐨勪釜鏁�
     public boolean  isMatch(String a,String b){
     	char tempA,tempB;
     	int lena,lenb,insteadOfNumber,bLoc=0;
@@ -77,7 +77,7 @@ public class Solution {
     			{
     			  bLoc++;
     			}
-    			if(tempB=='*')  //此处假设只有一个'*'   如何处理含有都个星号？？
+    			if(tempB=='*')  //姝ゅ鍋囪鍙湁涓�涓�'*'   濡備綍澶勭悊鍚湁閮戒釜鏄熷彿锛燂紵
     			{
     				i=i+insteadOfNumber;
     				bLoc++;
@@ -102,7 +102,7 @@ public class Solution {
                 match = s;
                 p++;
             }
-           // last pattern pointer was *, advancing string pointer  //只要出现不相等，就会回到 *的后一个字符开始比较
+           // last pattern pointer was *, advancing string pointer  //鍙鍑虹幇涓嶇浉绛夛紝灏变細鍥炲埌 *鐨勫悗涓�涓瓧绗﹀紑濮嬫瘮杈�
             else if (starIdx != -1){
                 p = starIdx + 1;  
                 match++;
@@ -113,7 +113,7 @@ public class Solution {
             else return false;
         }
 
-        //check for remaining characters in pattern  主要是针对这种情况 (pattern后面有*,但是不起到代替的) abcdef     a*ef*
+        //check for remaining characters in pattern  涓昏鏄拡瀵硅繖绉嶆儏鍐� (pattern鍚庨潰鏈�*,浣嗘槸涓嶈捣鍒颁唬鏇跨殑) abcdef     a*ef*
     while (p < pattern.length() && pattern.charAt(p) == '*')
          p++;
 
@@ -131,6 +131,6 @@ public class Solution {
 		String b="abc*de*h";
 		System.out.println(test.isMatch(a, b));
 		System.out.println(test.compare(a, b));
-		
+		//System.out.println(test.compare(a, b));
 	}
 }
