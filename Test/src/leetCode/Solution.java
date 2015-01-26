@@ -1,4 +1,4 @@
-﻿package leetCode;
+﻿package leetcode;
 /**
  * problem:Given two sorted arrays A and B ,merge  B into A as one sorted array 
  * @author  lason
@@ -127,7 +127,7 @@ public class Solution {
 		test.merge(A,5,B,B.length);
 		for(int i=0;i<5+B.length;i++)
 			System.out.println(A[i]);
-		String a="abcdedfgh";
+		String a = "abcdedfgh";
 		String b="abc*de*h";
 		System.out.println(test.isMatch(a, b));
 		System.out.println(test.compare(a, b));
